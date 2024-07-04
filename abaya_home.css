@@ -58,6 +58,23 @@ body {
     width: 100%;
     left: 0;
 }
+nav.navbar label{
+    color: #ffffff;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bolder;
+  right: 2%;
+  display: none;
+
+}
+nav.navbar input{
+   display: none;
+
+}
+nav.navbar #click:checked ~.nav-menu{
+right: 0%;
+transition: 1s;
+}
 
 /*main div*/
 .main_div1 {
@@ -466,11 +483,11 @@ body {
 }
 
 @media (max-width: 1240px) {
-    .info {
-        height: 56vh;
-    }
     .umrah-heading {
         gap: 2.5rem;
+    }
+    .info {
+        height: 56vh;
     }
     .info p:nth-child(3), .info p:nth-child(4), .info p:nth-child(5), .info p:nth-child(6), .info p:nth-child(7), .info p:nth-child(8), .info p:nth-child(9) {
         margin-top: -2vh;
@@ -567,6 +584,34 @@ body {
     }
 }
 @media (max-width: 680px) {
+    /* Navbar responsiveness */
+    nav.navbar label{
+
+        display: block;
+        
+        }
+          .nav-menu{
+          display: flex;
+        flex-direction: column;
+          color: white;
+          background-color: black;
+          top: 100%;
+          margin-left: -3%;
+          width: 103%;
+          position: absolute;
+        transition: 1s;
+         right: 130%;
+          height: 55vh;
+        z-index: 3;
+        }
+        .nav-item{
+          margin-left: 30%;
+          padding: 20px;
+        }
+        /* is query ko x ka icon ky liy use kya gya ha. f00d X ka shortcut ha  */
+        nav.navbar #click:checked ~.menu-btn i:before{
+                  content: '\f00d';
+              }
     .info {
         width: 50%;
     }
